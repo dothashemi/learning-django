@@ -3,6 +3,6 @@ from articles import views
 
 
 urlpatterns = [
-    path('', views.index),
-    path('<int:id>/', views.show),
+    path('', views.index, name='articles.index'),
+    path('<int:id>/', views.show, name='articles.show'),
 ]
