@@ -4,7 +4,7 @@ from .models import Article
 
 def index(request):
     articles = Article.objects.order_by("-published")[:10]
-
+    
     return render(request, 'index.html', {
         'title': 'Articles Page',
         'articles': articles
